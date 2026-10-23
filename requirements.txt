@@ -1,0 +1,4 @@
+argon2-cffi==25.1.0
+argon2-cffi-bindings==26.1.0
+cryptography==50.0.2
+pytest==9.1.1
