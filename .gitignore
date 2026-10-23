@@ -1,0 +1,14 @@
+# --- Secrets : ne JAMAIS versionner ---
+*.key
+*.p12
+*.pfx
+*.env
+.env
+private/
+
+# --- Python ---
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+
