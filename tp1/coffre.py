@@ -8,7 +8,7 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 T, M, P = 12, 64 * 1024, 4  # temps, mémoire (Kio), parallélisme
 
 
-def cle_maitresse(mot_de_passe: str, sel: bytes) -> bytes:
+def cle_maitresse(mot_de_passe: str, sel: bytes,t: int = T, m: int = M, p: int = P) -> bytes:
     """Argon2id -> 32 octets."""
     return hash_secret_raw(
         secret=mot_de_passe.encode("utf-8"),
@@ -48,3 +48,16 @@ def chiffrer(mot_de_passe: str, nom: str, donnees: bytes) -> bytes:
     ad = entete + nom.encode("utf-8")         # données associées
     chiffre = AESGCM(cle).encrypt(nonce, donnees, ad)
     return entete + chiffre
+
+def dechiffrer(mot_de_passe: str, nom: str, blob: bytes) -> bytes:
+    if blob[:4] != MAGIC:
+        raise ValueError("format inconnu")
+    t, m, p = struct.unpack(">III", blob[4:16])
+    sel = blob[16:32]
+    nonce = blob[32:44]
+    entete = blob[:44]
+    chiffre = blob[44:]
+    maitresse = cle_maitresse(mot_de_passe, sel, t, m, p)
+    cle = sous_cle(maitresse, b"chiffrement")
+    ad = entete + nom.encode("utf-8")
+    return AESGCM(cle).decrypt(nonce, chiffre, ad)
