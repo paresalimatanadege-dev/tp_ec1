@@ -17,3 +17,8 @@ def test_deux_chiffrements_differents():
     assert blob1 != blob2
     assert blob1[16:32] != blob2[16:32]   # sels différents
     assert blob1[32:44] != blob2[32:44]   # nonces différents
+
+def test_mauvais_mot_de_passe():
+    blob = chiffrer(MDP, NOM, DONNEES)
+    with pytest.raises(InvalidTag):
+        dechiffrer("mauvais-mot-de-passe", NOM, blob)
