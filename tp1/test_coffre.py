@@ -33,3 +33,12 @@ def test_octet_modifie():
     assert corrompu != blob   # garde-fou : on a bien modifié quelque chose
     with pytest.raises(InvalidTag):
         dechiffrer(MDP, NOM, corrompu)
+
+
+def test_nom_echange():
+    blob = chiffrer(MDP, "a.txt", DONNEES)
+    # Garde-fou : avec le bon nom, ça marche
+    assert dechiffrer(MDP, "a.txt", blob) == DONNEES
+    # Avec un autre nom : rejet
+    with pytest.raises(InvalidTag):
+        dechiffrer(MDP, "b.txt", blob)
