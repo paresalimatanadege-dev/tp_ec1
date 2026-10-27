@@ -1,7 +1,8 @@
 from argon2.low_level import hash_secret_raw, Type
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
-
+import os
+import struct 
 T, M, P = 12, 64 * 1024, 4  # temps, mémoire (Kio), parallélisme
 
 
@@ -27,3 +28,10 @@ def sous_cle(maitresse: bytes, usage: bytes) -> bytes:
         info=b"coffre-v1|" + usage,
     )
     return hkdf.derive(maitresse)
+
+
+MAGIC=b"CFR1"
+
+def construire_entete(t:int, m:int, p:int, sel:bytes, nonce: bytes)-> bytes:
+	"""Assemble l'en-tête de 44 octets."""
+	return MAGIC + struct.pack(">III",t,m,p) + sel +nonce
