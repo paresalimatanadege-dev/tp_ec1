@@ -1,8 +1,6 @@
-
 import pytest
 from cryptography.exceptions import InvalidTag
-
-from coffre import chiffrer, dechiffrer
+from coffre import chiffrer, dechiffrer, rechiffrer
 
 MDP = "mot-de-passe-de-test"   # fictif, jamais un vrai mot de passe
 NOM = "note.txt"
@@ -42,3 +40,11 @@ def test_nom_echange():
     # Avec un autre nom : rejet
     with pytest.raises(InvalidTag):
         dechiffrer(MDP, "b.txt", blob)
+
+
+def test_rechiffrer():
+    blob = chiffrer(MDP, NOM, DONNEES)
+    nouveau = rechiffrer(MDP, "autre-mdp", NOM, blob)
+    assert dechiffrer("autre-mdp", NOM, nouveau) == DONNEES
+    with pytest.raises(InvalidTag):
+        dechiffrer(MDP, NOM, nouveau)
