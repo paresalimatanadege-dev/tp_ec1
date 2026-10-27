@@ -2,7 +2,9 @@ from argon2.low_level import hash_secret_raw, Type
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 import os
-import struct 
+import struct
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+ 
 T, M, P = 12, 64 * 1024, 4  # temps, mémoire (Kio), parallélisme
 
 
@@ -34,4 +36,15 @@ MAGIC=b"CFR1"
 
 def construire_entete(t:int, m:int, p:int, sel:bytes, nonce: bytes)-> bytes:
 	"""Assemble l'en-tête de 44 octets."""
-	return MAGIC + struct.pack(">III",t,m,p) + sel +nonce
+	return MAGIC + struct.pack(">III",t,m,p) + sel +nonce 
+
+
+def chiffrer(mot_de_passe: str, nom: str, donnees: bytes) -> bytes:
+    sel = os.urandom(16)                      # neuf à chaque appel
+    nonce = os.urandom(12)                    # neuf à chaque appel
+    maitresse = cle_maitresse(mot_de_passe, sel)
+    cle = sous_cle(maitresse, b"chiffrement")
+    entete = construire_entete(T, M, P, sel, nonce)
+    ad = entete + nom.encode("utf-8")         # données associées
+    chiffre = AESGCM(cle).encrypt(nonce, donnees, ad)
+    return entete + chiffre
