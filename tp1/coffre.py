@@ -61,3 +61,7 @@ def dechiffrer(mot_de_passe: str, nom: str, blob: bytes) -> bytes:
     cle = sous_cle(maitresse, b"chiffrement")
     ad = entete + nom.encode("utf-8")
     return AESGCM(cle).decrypt(nonce, chiffre, ad)
+
+def rechiffrer(ancien_mdp: str, nouveau_mdp: str, nom: str, blob: bytes) -> bytes:
+    donnees = dechiffrer(ancien_mdp, nom, blob)
+    return chiffrer(nouveau_mdp, nom, donnees)
