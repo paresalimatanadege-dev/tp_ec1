@@ -1,3 +1,4 @@
+
 import pytest
 from cryptography.exceptions import InvalidTag
 
@@ -22,3 +23,13 @@ def test_mauvais_mot_de_passe():
     blob = chiffrer(MDP, NOM, DONNEES)
     with pytest.raises(InvalidTag):
         dechiffrer("mauvais-mot-de-passe", NOM, blob)
+
+
+def test_octet_modifie():
+    blob = chiffrer(MDP, NOM, DONNEES)
+    b = bytearray(blob)
+    b[60] ^= 0x01
+    corrompu = bytes(b)
+    assert corrompu != blob   # garde-fou : on a bien modifié quelque chose
+    with pytest.raises(InvalidTag):
+        dechiffrer(MDP, NOM, corrompu)
