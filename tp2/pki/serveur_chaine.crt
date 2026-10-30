@@ -1,0 +1,110 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 8192 (0x2000)
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: C=BF, O=Universite TP, CN=Intermediaire TP
+        Validity
+            Not Before: Oct 30 11:36:12 2026 GMT
+            Not After : Jan 28 11:36:12 2027 GMT
+        Subject: CN=www.tp.local
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:93:d2:93:b6:af:2e:b3:43:76:f6:1a:f7:e3:2b:
+                    ac:a6:17:c5:e1:f2:80:94:85:73:98:00:97:f4:20:
+                    ce:45:a8:4a:2c:05:66:26:39:e6:ba:e7:7c:d4:c7:
+                    79:c4:a1:d8:27:ed:1c:26:1f:39:c3:55:7b:67:7c:
+                    99:45:30:e8:6f
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Subject Key Identifier: 
+                56:1C:A5:C9:71:1B:73:91:6D:8B:22:F7:63:6E:38:2B:03:7A:54:C6
+            X509v3 Authority Key Identifier: 
+                4A:E9:0E:03:9E:9F:E1:09:70:DD:CB:2A:41:37:88:05:08:B7:DF:C9
+            X509v3 Subject Alternative Name: 
+                DNS:www.tp.local, DNS:tp.local
+    Signature Algorithm: ecdsa-with-SHA256
+    Signature Value:
+        30:45:02:20:2f:ea:20:56:3d:73:0f:c6:bf:03:f4:67:bc:22:
+        ec:87:11:44:27:8c:f6:84:b2:21:38:5d:3e:26:ab:5e:3d:d6:
+        02:21:00:bf:6e:7f:6f:4b:1d:d2:11:05:27:77:e9:a1:ad:f9:
+        0b:61:c6:2c:04:24:0a:72:fe:8c:67:fb:07:6c:d9:ca:08
+-----BEGIN CERTIFICATE-----
+MIIB4TCCAYegAwIBAgICIAAwCgYIKoZIzj0EAwIwQDELMAkGA1UEBhMCQkYxFjAU
+BgNVBAoMDVVuaXZlcnNpdGUgVFAxGTAXBgNVBAMMEEludGVybWVkaWFpcmUgVFAw
+HhcNMjYxMDMwMTEzNjEyWhcNMjcwMTI4MTEzNjEyWjAXMRUwEwYDVQQDDAx3d3cu
+dHAubG9jYWwwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAST0pO2ry6zQ3b2Gvfj
+K6ymF8Xh8oCUhXOYAJf0IM5FqEosBWYmOea653zUx3nEodgn7RwmHznDVXtnfJlF
+MOhvo4GZMIGWMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQM
+MAoGCCsGAQUFBwMBMB0GA1UdDgQWBBRWHKXJcRtzkW2LIvdjbjgrA3pUxjAfBgNV
+HSMEGDAWgBRK6Q4Dnp/hCXDdyypBN4gFCLffyTAhBgNVHREEGjAYggx3d3cudHAu
+bG9jYWyCCHRwLmxvY2FsMAoGCCqGSM49BAMCA0gAMEUCIC/qIFY9cw/GvwP0Z7wi
+7IcRRCeM9oSyIThdPiarXj3WAiEAv25/b0sd0hEFJ3fpoa35C2HGLAQkCnL+jGf7
+B2zZygg=
+-----END CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4096 (0x1000)
+        Signature Algorithm: ecdsa-with-SHA384
+        Issuer: C=BF, O=Universite TP, CN=Racine TP
+        Validity
+            Not Before: Oct 30 11:06:09 2026 GMT
+            Not After : Oct 29 11:06:09 2031 GMT
+        Subject: C=BF, O=Universite TP, CN=Intermediaire TP
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:4e:a2:af:04:de:1a:02:c5:03:49:65:65:fc:52:
+                    e5:62:ca:19:10:ff:ae:e0:ec:1a:ca:ad:23:cd:6d:
+                    28:61:f4:8b:0c:d8:d3:41:80:1c:6b:67:07:fe:a7:
+                    c2:83:68:d5:c9:fe:89:61:1b:ba:72:91:fe:42:d5:
+                    d0:da:58:fd:a6
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Name Constraints: critical
+                Permitted:
+                  DNS:.tp.local
+                  DNS:tp.local
+                  email:tp.local
+            X509v3 Subject Key Identifier: 
+                4A:E9:0E:03:9E:9F:E1:09:70:DD:CB:2A:41:37:88:05:08:B7:DF:C9
+            X509v3 Authority Key Identifier: 
+                68:62:6B:A5:79:B3:47:40:26:9A:BA:77:20:1E:32:A4:17:F0:24:C4
+    Signature Algorithm: ecdsa-with-SHA384
+    Signature Value:
+        30:65:02:31:00:f4:59:58:19:71:f4:3e:27:25:63:e5:0d:ef:
+        1e:ad:06:81:34:d9:e4:e7:1c:01:37:1b:1f:25:f7:ed:fe:01:
+        9e:30:3c:63:56:0a:8d:38:de:67:82:fa:44:dc:ab:eb:13:02:
+        30:1e:90:4d:1d:c1:0c:65:06:97:a2:5c:12:d9:a4:f2:47:fa:
+        c0:6a:34:94:0e:21:87:07:de:38:7a:1e:84:67:ee:99:a2:45:
+        4f:3c:58:86:08:20:e3:a7:16:6f:65:d3:11
+-----BEGIN CERTIFICATE-----
+MIICJjCCAaygAwIBAgICEAAwCgYIKoZIzj0EAwMwOTELMAkGA1UEBhMCQkYxFjAU
+BgNVBAoMDVVuaXZlcnNpdGUgVFAxEjAQBgNVBAMMCVJhY2luZSBUUDAeFw0yNjEw
+MzAxMTA2MDlaFw0zMTEwMjkxMTA2MDlaMEAxCzAJBgNVBAYTAkJGMRYwFAYDVQQK
+DA1Vbml2ZXJzaXRlIFRQMRkwFwYDVQQDDBBJbnRlcm1lZGlhaXJlIFRQMFkwEwYH
+KoZIzj0CAQYIKoZIzj0DAQcDQgAETqKvBN4aAsUDSWVl/FLlYsoZEP+u4Owayq0j
+zW0oYfSLDNjTQYAca2cH/qfCg2jVyf6JYRu6cpH+QtXQ2lj9pqOBnDCBmTASBgNV
+HRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAzBgNVHR4BAf8EKTAnoCUw
+C4IJLnRwLmxvY2FsMAqCCHRwLmxvY2FsMAqBCHRwLmxvY2FsMB0GA1UdDgQWBBRK
+6Q4Dnp/hCXDdyypBN4gFCLffyTAfBgNVHSMEGDAWgBRoYmulebNHQCaauncgHjKk
+F/AkxDAKBggqhkjOPQQDAwNoADBlAjEA9FlYGXH0PiclY+UN7x6tBoE02eTnHAE3
+Gx8l9+3+AZ4wPGNWCo043meC+kTcq+sTAjAekE0dwQxlBpeiXBLZpPJH+sBqNJQO
+IYcH3jh6HoRn7pmiRU88WIYIIOOnFm9l0xE=
+-----END CERTIFICATE-----
