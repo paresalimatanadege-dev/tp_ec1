@@ -29,3 +29,11 @@ extendedKeyUsage = clientAuth
 subjectAltName = email:alice@tp.local
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid
+
+[ ext_client_bob ]
+basicConstraints       = critical,CA:FALSE
+keyUsage               = critical,digitalSignature
+extendedKeyUsage       = clientAuth
+subjectAltName         = email:bob@tp.local
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid
