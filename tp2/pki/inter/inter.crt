@@ -1,0 +1,57 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4096 (0x1000)
+        Signature Algorithm: ecdsa-with-SHA384
+        Issuer: C=BF, O=Universite TP, CN=Racine TP
+        Validity
+            Not Before: Oct 30 11:06:09 2026 GMT
+            Not After : Oct 29 11:06:09 2031 GMT
+        Subject: C=BF, O=Universite TP, CN=Intermediaire TP
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:4e:a2:af:04:de:1a:02:c5:03:49:65:65:fc:52:
+                    e5:62:ca:19:10:ff:ae:e0:ec:1a:ca:ad:23:cd:6d:
+                    28:61:f4:8b:0c:d8:d3:41:80:1c:6b:67:07:fe:a7:
+                    c2:83:68:d5:c9:fe:89:61:1b:ba:72:91:fe:42:d5:
+                    d0:da:58:fd:a6
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Name Constraints: critical
+                Permitted:
+                  DNS:.tp.local
+                  DNS:tp.local
+                  email:tp.local
+            X509v3 Subject Key Identifier: 
+                4A:E9:0E:03:9E:9F:E1:09:70:DD:CB:2A:41:37:88:05:08:B7:DF:C9
+            X509v3 Authority Key Identifier: 
+                68:62:6B:A5:79:B3:47:40:26:9A:BA:77:20:1E:32:A4:17:F0:24:C4
+    Signature Algorithm: ecdsa-with-SHA384
+    Signature Value:
+        30:65:02:31:00:f4:59:58:19:71:f4:3e:27:25:63:e5:0d:ef:
+        1e:ad:06:81:34:d9:e4:e7:1c:01:37:1b:1f:25:f7:ed:fe:01:
+        9e:30:3c:63:56:0a:8d:38:de:67:82:fa:44:dc:ab:eb:13:02:
+        30:1e:90:4d:1d:c1:0c:65:06:97:a2:5c:12:d9:a4:f2:47:fa:
+        c0:6a:34:94:0e:21:87:07:de:38:7a:1e:84:67:ee:99:a2:45:
+        4f:3c:58:86:08:20:e3:a7:16:6f:65:d3:11
+-----BEGIN CERTIFICATE-----
+MIICJjCCAaygAwIBAgICEAAwCgYIKoZIzj0EAwMwOTELMAkGA1UEBhMCQkYxFjAU
+BgNVBAoMDVVuaXZlcnNpdGUgVFAxEjAQBgNVBAMMCVJhY2luZSBUUDAeFw0yNjEw
+MzAxMTA2MDlaFw0zMTEwMjkxMTA2MDlaMEAxCzAJBgNVBAYTAkJGMRYwFAYDVQQK
+DA1Vbml2ZXJzaXRlIFRQMRkwFwYDVQQDDBBJbnRlcm1lZGlhaXJlIFRQMFkwEwYH
+KoZIzj0CAQYIKoZIzj0DAQcDQgAETqKvBN4aAsUDSWVl/FLlYsoZEP+u4Owayq0j
+zW0oYfSLDNjTQYAca2cH/qfCg2jVyf6JYRu6cpH+QtXQ2lj9pqOBnDCBmTASBgNV
+HRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAzBgNVHR4BAf8EKTAnoCUw
+C4IJLnRwLmxvY2FsMAqCCHRwLmxvY2FsMAqBCHRwLmxvY2FsMB0GA1UdDgQWBBRK
+6Q4Dnp/hCXDdyypBN4gFCLffyTAfBgNVHSMEGDAWgBRoYmulebNHQCaauncgHjKk
+F/AkxDAKBggqhkjOPQQDAwNoADBlAjEA9FlYGXH0PiclY+UN7x6tBoE02eTnHAE3
+Gx8l9+3+AZ4wPGNWCo043meC+kTcq+sTAjAekE0dwQxlBpeiXBLZpPJH+sBqNJQO
+IYcH3jh6HoRn7pmiRU88WIYIIOOnFm9l0xE=
+-----END CERTIFICATE-----
