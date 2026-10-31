@@ -1,22 +1,22 @@
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number: 8192 (0x2000)
+        Serial Number: 8198 (0x2006)
         Signature Algorithm: ecdsa-with-SHA256
         Issuer: C=BF, O=Universite TP, CN=Intermediaire TP
         Validity
-            Not Before: Oct 30 11:36:12 2026 GMT
-            Not After : Jan 28 11:36:12 2027 GMT
+            Not Before: Oct 31 16:50:51 2026 GMT
+            Not After : Jan 29 16:50:51 2027 GMT
         Subject: CN=www.tp.local
         Subject Public Key Info:
             Public Key Algorithm: id-ecPublicKey
                 Public-Key: (256 bit)
                 pub:
-                    04:93:d2:93:b6:af:2e:b3:43:76:f6:1a:f7:e3:2b:
-                    ac:a6:17:c5:e1:f2:80:94:85:73:98:00:97:f4:20:
-                    ce:45:a8:4a:2c:05:66:26:39:e6:ba:e7:7c:d4:c7:
-                    79:c4:a1:d8:27:ed:1c:26:1f:39:c3:55:7b:67:7c:
-                    99:45:30:e8:6f
+                    04:ac:e2:5d:d5:c7:4c:76:09:34:2f:d2:fd:01:17:
+                    ca:ea:3a:4b:fa:3d:f7:fb:cc:ac:ec:22:18:c2:d6:
+                    8a:34:f8:63:a2:e7:81:b0:31:1b:75:9a:61:dc:27:
+                    6e:c3:e2:7d:80:86:4a:81:6f:ce:1e:25:fe:2d:b3:
+                    08:d3:24:eb:78
                 ASN1 OID: prime256v1
                 NIST CURVE: P-256
         X509v3 extensions:
@@ -27,29 +27,29 @@ Certificate:
             X509v3 Extended Key Usage: 
                 TLS Web Server Authentication
             X509v3 Subject Key Identifier: 
-                56:1C:A5:C9:71:1B:73:91:6D:8B:22:F7:63:6E:38:2B:03:7A:54:C6
+                A7:CB:1D:B9:68:9D:91:1B:16:29:91:5F:51:A1:E5:B4:01:65:48:05
             X509v3 Authority Key Identifier: 
                 4A:E9:0E:03:9E:9F:E1:09:70:DD:CB:2A:41:37:88:05:08:B7:DF:C9
             X509v3 Subject Alternative Name: 
                 DNS:www.tp.local, DNS:tp.local
     Signature Algorithm: ecdsa-with-SHA256
     Signature Value:
-        30:45:02:20:2f:ea:20:56:3d:73:0f:c6:bf:03:f4:67:bc:22:
-        ec:87:11:44:27:8c:f6:84:b2:21:38:5d:3e:26:ab:5e:3d:d6:
-        02:21:00:bf:6e:7f:6f:4b:1d:d2:11:05:27:77:e9:a1:ad:f9:
-        0b:61:c6:2c:04:24:0a:72:fe:8c:67:fb:07:6c:d9:ca:08
+        30:44:02:20:58:b3:ed:1f:1d:1f:6c:09:81:4a:95:76:5c:1f:
+        0d:c1:e2:21:6e:50:d9:67:59:8a:a7:50:b7:b8:a1:bc:0d:0e:
+        02:20:01:03:a8:39:ac:ea:f9:37:37:94:1d:4a:51:99:a0:4a:
+        37:df:c7:a2:e4:48:da:a3:22:47:93:bd:8d:ec:8b:bc
 -----BEGIN CERTIFICATE-----
-MIIB4TCCAYegAwIBAgICIAAwCgYIKoZIzj0EAwIwQDELMAkGA1UEBhMCQkYxFjAU
+MIIB4DCCAYegAwIBAgICIAYwCgYIKoZIzj0EAwIwQDELMAkGA1UEBhMCQkYxFjAU
 BgNVBAoMDVVuaXZlcnNpdGUgVFAxGTAXBgNVBAMMEEludGVybWVkaWFpcmUgVFAw
-HhcNMjYxMDMwMTEzNjEyWhcNMjcwMTI4MTEzNjEyWjAXMRUwEwYDVQQDDAx3d3cu
-dHAubG9jYWwwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAST0pO2ry6zQ3b2Gvfj
-K6ymF8Xh8oCUhXOYAJf0IM5FqEosBWYmOea653zUx3nEodgn7RwmHznDVXtnfJlF
-MOhvo4GZMIGWMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQM
-MAoGCCsGAQUFBwMBMB0GA1UdDgQWBBRWHKXJcRtzkW2LIvdjbjgrA3pUxjAfBgNV
+HhcNMjYxMDMxMTY1MDUxWhcNMjcwMTI5MTY1MDUxWjAXMRUwEwYDVQQDDAx3d3cu
+dHAubG9jYWwwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASs4l3Vx0x2CTQv0v0B
+F8rqOkv6Pff7zKzsIhjC1oo0+GOi54GwMRt1mmHcJ27D4n2AhkqBb84eJf4tswjT
+JOt4o4GZMIGWMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQM
+MAoGCCsGAQUFBwMBMB0GA1UdDgQWBBSnyx25aJ2RGxYpkV9RoeW0AWVIBTAfBgNV
 HSMEGDAWgBRK6Q4Dnp/hCXDdyypBN4gFCLffyTAhBgNVHREEGjAYggx3d3cudHAu
-bG9jYWyCCHRwLmxvY2FsMAoGCCqGSM49BAMCA0gAMEUCIC/qIFY9cw/GvwP0Z7wi
-7IcRRCeM9oSyIThdPiarXj3WAiEAv25/b0sd0hEFJ3fpoa35C2HGLAQkCnL+jGf7
-B2zZygg=
+bG9jYWyCCHRwLmxvY2FsMAoGCCqGSM49BAMCA0cAMEQCIFiz7R8dH2wJgUqVdlwf
+DcHiIW5Q2WdZiqdQt7ihvA0OAiABA6g5rOr5NzeUHUpRmaBKN9/HouRI2qMiR5O9
+jeyLvA==
 -----END CERTIFICATE-----
 Certificate:
     Data:

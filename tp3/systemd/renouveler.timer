@@ -1,0 +1,9 @@
+[Unit]
+Description=Verification quotidienne du certificat www.tp.local
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
