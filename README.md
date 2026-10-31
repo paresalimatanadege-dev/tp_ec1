@@ -90,7 +90,7 @@ Les noms alternatifs (SAN) ne figurent pas dans cette section : ils viennent de 
 
 La sortie de `openssl x509 -in racine/racine.crt -noout -text` donne : émetteur et sujet identiques (`C=BF, O=Universite TP, CN=Racine TP`), validité du 30 octobre 2026 au 27 octobre 2036 (dix ans), clé à courbe elliptique de 384 bits (`secp384r1`, soit P-384), signature `ecdsa-with-SHA384`, et deux extensions critiques : `Basic Constraints: CA:TRUE, pathlen:1` et `Key Usage: Certificate Sign, CRL Sign`.
 
-![Certificat de la racine](tp2/captures/racine.png)
+![Certificat de la racine](tp2/pki/captures/racine.png)
 
 **Pourquoi l'émetteur et le sujet sont-ils identiques ?** Parce que le certificat est auto-signé : la racine se certifie elle-même, car aucune autorité ne se trouve au-dessus d'elle. C'est une ancre de confiance, que l'on reçoit par un canal sûr et sur laquelle s'appuie toute la chaîne.
 
@@ -98,13 +98,13 @@ La sortie de `openssl x509 -in racine/racine.crt -noout -text` donne : émetteur
 
 Après signature par la racine, le certificat de l'intermédiaire contient bien `Basic Constraints: critical, CA:TRUE, pathlen:0`, `Key Usage: critical, Certificate Sign, CRL Sign` et une extension `Name Constraints` critique limitant les noms permis à `tp.local`. La commande `openssl verify -CAfile racine/racine.crt inter/inter.crt` confirme que la racine a bien signé ce certificat.
 
-![liste `Permitted:` de l'extension `Name Constraints`](tp2/captures/inter.png)
+![liste `Permitted:` de l'extension `Name Constraints`](tp2/pki/captures/inter.png)
 
 ### Étape 5 – Validation des certificats
 
 La chaîne du serveur est acceptée (`OK`) pour le nom `www.tp.local` : les signatures, les dates, les contraintes de nom et le nom d'hôte sont corrects. Avec le nom `autre.example`, la validation échoue : la chaîne est bonne, mais le certificat n'a pas été émis pour ce nom. Le certificat d'Alice est accepté avec l'usage `sslclient`, ce qui confirme son `extendedKeyUsage = clientAuth`. Enfin, le certificat demandé pour `www.example.com` est refusé avec l'erreur `permitted subtree violation`, parce que ce nom sort de la zone `tp.local` autorisée par l'intermédiaire.
 
-![sorties des quatre commandes `openssl verify`](tp2/captures/open.png)
+![sorties des quatre commandes `openssl verify`](tp2/pki/captures/open.png)
 
 **Pourquoi l'AC a-t-elle pu signer ce certificat alors qu'il est refusé à la validation ?** L'outil `openssl ca` se contente de signer ce qu'on lui présente : il n'applique pas les contraintes de nom de son propre certificat. Ces contraintes sont inscrites dans le certificat de l'intermédiaire et sont appliquées par le vérificateur (navigateur, `openssl verify`, nginx) lorsqu'il parcourt la chaîne. Leur intérêt est de ne pas dépendre de la bonne conduite de l'intermédiaire : même compromise ou mal configurée, elle ne peut pas faire accepter un certificat en dehors de `tp.local`.
 
