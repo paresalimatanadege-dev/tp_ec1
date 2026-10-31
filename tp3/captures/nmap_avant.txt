@@ -1,6 +1,6 @@
-Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-31 11:05 +0100
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-31 11:40 +0100
 Nmap scan report for www.tp.local (127.0.0.1)
-Host is up (0.00035s latency).
+Host is up (0.000098s latency).
 rDNS record for 127.0.0.1: localhost
 
 PORT    STATE SERVICE
@@ -32,4 +32,4 @@ PORT    STATE SERVICE
 |     cipher preference: client
 |_  least strength: A
 
-Nmap done: 1 IP address (1 host up) scanned in 0.35 seconds
+Nmap done: 1 IP address (1 host up) scanned in 0.24 seconds
