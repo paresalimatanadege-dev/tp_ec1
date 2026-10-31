@@ -191,6 +191,8 @@ Pour le test avec un client valide, j'ai émis un certificat pour Bob, car la se
 **Capture Wireshark.** Sur l'interface `lo`, avec le filtre `tls.handshake.type == 1 || tls.handshake.type == 2`, on identifie le `ClientHello`, par lequel le client propose ses versions de TLS, ses suites de chiffrement et sa part d'échange de clés (extension `key_share`), puis le `ServerHello`, par lequel le serveur choisit la version et la suite et renvoie sa part d'échange de clés.
 Les captures d'écrans se trouve dans `tp3/captures/`.
 
+![`capture Wireshark`](tp3/captures/Screenshot_2026-10-31_10_26_22.png)
+
 **Pourquoi le certificat du serveur n'est-il pas visible en TLS 1.3 ?** Dès le `ServerHello`, le client et le serveur ont calculé un secret partagé grâce à l'échange de clés, et tout le reste de la poignée de main, dont le message `Certificate`, est envoyé chiffré. En TLS 1.2, ce message circule en clair. Un observateur du réseau ne voit donc plus, en TLS 1.3, l'identité du serveur ni celle du client.
 
 ### Étape 4 – Vérification de la configuration
