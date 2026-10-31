@@ -5,3 +5,4 @@ V	270128170447Z		2003	unknown	/CN=bob@tp.local
 V	261120145207Z		2004	unknown	/CN=moyen.tp.local
 V	261105145239Z		2005	unknown	/CN=court.tp.local
 V	270129165051Z		2006	unknown	/CN=www.tp.local
+V	270129180306Z		2007	unknown	/CN=www.example.com
